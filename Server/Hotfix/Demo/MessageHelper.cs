@@ -1,20 +1,23 @@
 ﻿
 
+using System.Collections.Generic;
+
 namespace ET
 {
     public static class MessageHelper
     {
         public static void Broadcast(Unit unit, IActorMessage message)
         {
-            var units = unit.Domain.GetComponent<UnitComponent>().GetAll();
-
-            if (units == null) return;
-
-            foreach (Unit u in units)
+            Dictionary<long, AOIEntity> dict = unit.GetBeSeePlayers();
+            foreach (AOIEntity u in dict.Values)
             {
-                UnitGateComponent unitGateComponent = u.GetComponent<UnitGateComponent>();
-                SendActor(unitGateComponent.GateSessionActorId, message);
+                SendToClient(u.Unit, message);
             }
+        }
+        
+        public static void SendToClient(Unit unit, IActorMessage message)
+        {
+            SendActor(unit.GetComponent<UnitGateComponent>().GateSessionActorId, message);
         }
         
         
