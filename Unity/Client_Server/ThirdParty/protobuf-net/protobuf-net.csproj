@@ -16,7 +16,7 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <Compile Include="..\..\Unity\Assets\Mono\ThirdParty\protobuf-net\**\*.cs">
+        <Compile Include="..\..\..\..\Unity\Assets\Mono\ThirdParty\protobuf-net\**\*.cs">
             <Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
     </ItemGroup>

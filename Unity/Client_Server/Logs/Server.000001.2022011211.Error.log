@@ -1,0 +1,13 @@
+2022-01-12 11:12:52.3889 not found actor: Process  10017 68084302612791304 { "_t" : "M2C_Stop", "Error" : 0, "_id" : 1102074125523943429, "X" : -8.2360324859619141, "Y" : 0.091531991958618164, "Z" : 3.9258365631103516, "A" : 0.0, "B" : -0.61861521005630493, "C" : 0.0, "W" : 0.78569412231445312 }
+   at ET.SessionStreamDispatcherServerInner.Dispatch(Session session, MemoryStream memoryStream) in D:\zwb\study\ET\Unity\Client_Server\Server\Hotfix\Demo\Session\SessionStreamDispatcherServerInner.cs:line 33
+   at ET.SessionStreamDispatcherSystem.Dispatch(SessionStreamDispatcher self, Int32 type, Session session, MemoryStream memoryStream) in D:\zwb\study\ET\Unity\Codes\Hotfix\Module\Message\SessionStreamDispatcherSystem.cs:line 81
+   at ET.NetInnerComponentSystem.OnRead(NetInnerComponent self, Int64 channelId, MemoryStream memoryStream) in D:\zwb\study\ET\Unity\Client_Server\Server\Hotfix\Module\MessageInner\NetInnerComponentSystem.cs:line 63
+   at ET.AService.OnRead(Int64 channelId, MemoryStream memoryStream) in D:\zwb\study\ET\Unity\Assets\Mono\Module\Network\AService.cs:line 53
+   at ET.TChannel.OnRead(MemoryStream memoryStream) in D:\zwb\study\ET\Unity\Assets\Mono\Module\NetworkTCP\TChannel.cs:line 391
+   at ET.TChannel.HandleRecv(Object o) in D:\zwb\study\ET\Unity\Assets\Mono\Module\NetworkTCP\TChannel.cs:line 279
+   at ET.TChannel.OnRecvComplete(Object o) in D:\zwb\study\ET\Unity\Assets\Mono\Module\NetworkTCP\TChannel.cs:line 227
+   at ET.TChannel.<>c__DisplayClass10_0.<OnComplete>b__1() in D:\zwb\study\ET\Unity\Assets\Mono\Module\NetworkTCP\TChannel.cs:line 37
+   at ET.ThreadSynchronizationContext.Update() in D:\zwb\study\ET\Unity\Assets\Mono\Core\ThreadSynchronizationContext.cs:line 34
+   at ET.Game.Update() in D:\zwb\study\ET\Unity\Codes\Model\Core\Entity\Game.cs:line 38
+   at ET.Program.Main(String[] args) in D:\zwb\study\ET\Unity\Client_Server\Server\App\Program.cs:line 50
+
